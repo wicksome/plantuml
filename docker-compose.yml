@@ -1,0 +1,10 @@
+version: "3.9"
+services:
+  plantuml-server:
+    image: "plantuml/plantuml-server"
+    ports:
+      - "8080:8080"
+    environment:
+      - PLANTUML_LIMIT_SIZE=16384
+      - PLANTUML_STATS=on
+      - ALLOW_PLANTUML_INCLUDE=true
