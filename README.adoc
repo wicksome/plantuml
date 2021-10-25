@@ -1,0 +1,6 @@
+= plantuml
+
+[source, bash]
+----
+$ docker compose up -d
+----
