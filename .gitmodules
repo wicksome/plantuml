@@ -1,4 +1,4 @@
 [submodule "plantuml-editor"]
 	path = plantuml-editor
 	url = https://github.com/wicksome/plantuml-editor.git
-    branch = feature/docker
+	branch = feature/docker
