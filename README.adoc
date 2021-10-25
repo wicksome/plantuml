@@ -1,13 +1,17 @@
-= plantuml
+= PlantUML
+
+* plantuml-server
+* plantuml-editor
+* docker-compose
 
 [source, bash]
+.run on your local
 ----
 $ docker compose up -d
 ----
 
-
-
 [source, bash]
+.update submodule
 ----
 $ git submodule update --remote
 ----
