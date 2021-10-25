@@ -4,3 +4,10 @@
 ----
 $ docker compose up -d
 ----
+
+
+
+[source, bash]
+----
+$ git submodule update --remote
+----

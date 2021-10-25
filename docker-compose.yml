@@ -3,8 +3,23 @@ services:
   plantuml-server:
     image: "plantuml/plantuml-server"
     ports:
-      - "8080:8080"
+      - "4000:8080"
     environment:
       - PLANTUML_LIMIT_SIZE=16384
       - PLANTUML_STATS=on
       - ALLOW_PLANTUML_INCLUDE=true
+    container_name: "plantuml-server"
+  plantuml-editor:
+    build:
+      context: "./plantuml-editor/"
+      dockerfile: Dockerfile
+      args:
+        - VUE_APP_URL=http://localhost:8080
+        - VUE_APP_SERVER=http://localhost:4000/
+        - VUE_APP_CDN=http://localhost:4000/
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      - TZ=Asia/Seoul
+    container_name: "plantuml-editor"
